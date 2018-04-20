@@ -1,9 +1,9 @@
-Continuous Scales：
+Continuous Scales：Map a continuous, quantitative domain to a continuous range.
 
 continuous(value)
-从range中返回一个给定domain对应的值 \n
+从range中返回一个给定domain对应的值 
 continuous.invert(value)
-从domain中返回一个给定range对应的值,这个方法仅支持range是数值型的情况，否则返回NaN \n
+从domain中返回一个给定range对应的值,这个方法仅支持range是数值型的情况，否则返回NaN 
 continuous.domain([domain])
 设置比例尺的域
 continuous.range([range])
@@ -50,7 +50,7 @@ d3.scaleTime()
 Constructs a new time scale with the domain [2000-01-01, 2000-01-02], 
 the unit range [0, 1], the default interpolator and clamping disabled.
 
-Sequential Scales:
+Sequential Scales:Map a continuous, quantitative domain to a continuous, fixed interpolator.
 
 和continuous相似，但是输出的range是固定的，不可配置的，也米有暴露出 invert, range, rangeRound, interpolate这些方法 
 d3.scaleSequential(interpolator)
@@ -65,7 +65,7 @@ d3.interpolateCool(t)
 d3.interpolateRainbow(t)
 d3.interpolateCubehelixDefault(t)
 
-Quantize Scales：
+Quantize Scales：Map a continuous, quantitative domain to a discrete range.
 
 和linear scale 相似，但是使用离散的range
 
@@ -91,11 +91,33 @@ Constructs a new threshold scale with the default domain [0.5] and the default r
 Thus, the default threshold scale is equivalent to the Math.round function for numbers; 
 for example threshold(0.49) returns 0, and threshold(0.51) returns 1.
 
+Ordinal Scales: Map a discrete domain to a discrete range.
 
+d3.scaleOrdinal([range])
+Constructs a new ordinal scale with an empty domain and the specified range. 
+If a range is not specified, it defaults to the empty array
 
+ordinal.unknown([value])
 
+d3.scaleImplicit
+一个特殊值
 
+band scale
 
+d3.scaleBand()
+Constructs a new band scale with the empty domain, the unit range [0, 1], no padding, no rounding and center alignment.
+
+point scale
+
+d3.scalePoint()
+Constructs a new point scale with the empty domain, the unit range [0, 1], no padding, no rounding and center alignment.
+
+category scale
+
+d3.schemeCategory10
+d3.schemeCategory20
+d3.schemeCategory20b
+d3.schemeCategory20c
 
 
 
