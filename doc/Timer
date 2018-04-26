@@ -1,0 +1,21 @@
+这个模块提供了一个高效的队列，能管理上千并发动画同时保证与并发或分段动画一致的同步时序。
+在内部使用 requestAnimationFrame 进行 fluid animation(如果支持的话)，否则切换使用 setTimeout来实现。
+
+d3.now()
+返回由 performance.now 定义的当前时间(如果支持的话), 否则返回 Date.now。
+
+d3.timer(callback[, delay[, time]])
+定义一个新的定时器，然后重复执行指定的 callback 直到定时器被 stopped。
+
+timer.restart(callback[, delay[, time]])
+指定 callback 并重新启动定时器，也可以指定 delay 和 time 选项。
+
+timer.stop() 
+停止定时器并阻止后续的回调执行。如果定时器已经停止的话则这个方法没有任何影响。
+
+d3.timerFlush()
+
+d3.timeout(callback[, delay[, time]])
+内部使用requestAnimationFrame实现
+d3.interval(callback[, delay[, time]])
+内部使用requestAnimationFrame实现
